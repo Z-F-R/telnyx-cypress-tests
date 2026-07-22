@@ -19,7 +19,7 @@ The goal of this project is to verify the main functionality of the Telnyx websi
 
 
 ## Project Structure
-
+```text
 cypress/
 │
 ├── e2e/
@@ -48,7 +48,7 @@ cypress/
 ├──package-lock.json
 │
 └──package.json
-
+```
 
 ## Test Scenarios
 
@@ -87,7 +87,7 @@ getPricingMenu() {
 clickPricingMenu() {
     this.getPricingMenu().click()
 }
-
+```
 Benefits:
 
 - Improved test readability
@@ -100,22 +100,22 @@ Benefits:
 
 Clone repository:
 
-git clone <repository-url>
+- git clone <repository-url>
 
 Install dependencies:
 
-npm install
+- npm install
 
 
 ## Running Tests
 
 Open Cypress Test Runner:
 
-npx cypress open
+- npx cypress open
 
 Run tests in headless mode:
 
-npx cypress run
+- npx cypress run
 
 
 ## Cypress Cloud Reporting
