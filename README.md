@@ -137,7 +137,7 @@ The dashboard provides:
 GitHub Actions is configured to automatically run Cypress tests after push request event.
 
 Pipeline flow:
-
+```text
 GitHub Push
       |
       |
@@ -151,7 +151,7 @@ Run Cypress tests
       |
       |
 Upload results to Cypress Cloud
-
+```
 
 ## Known issues
 
