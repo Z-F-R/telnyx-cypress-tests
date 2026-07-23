@@ -113,7 +113,7 @@ Open Cypress Test Runner:
 
 Run tests in headless mode:
 
-- npx cypress run
+- npx cypress run --browser chrome
 
 
 ## Cypress Cloud Reporting
@@ -134,7 +134,7 @@ The dashboard provides:
 
 ## CI/CD Pipeline
 
-GitHub Actions is configured to automatically run Cypress tests after push/pull request events.
+GitHub Actions is configured to automatically run Cypress tests after push request event.
 
 Pipeline flow:
 
