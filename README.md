@@ -33,21 +33,19 @@ cypress/
 │
 ├── fixtures/
 │
-├── support/
-│ ├── commands.js
-│ └── e2e.js
-│
-├── fixtures/
-│
-├── .github/
-│ ├── workflows/
-│ └── cypress.yml
-│
-├──cypress.config.js
-│
-├──package-lock.json
-│
-└──package.json
+└── support/
+  ├── commands.js
+  └── e2e.js
+
+.github/
+  └── workflows/
+    └── cypress.yml
+
+cypress.config.js
+
+package.json
+
+package-lock.json
 ```
 
 ## Test Scenarios
