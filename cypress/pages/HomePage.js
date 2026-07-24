@@ -14,7 +14,7 @@ class HomePage {
     }
 
     getSignUpButton() {
-        return cy.get('a[href="/sign-up"]').first()
+        return cy.get('a[href="/sign-up"]:visible')
     }
 
     getLogInButton() {
@@ -42,15 +42,15 @@ class HomePage {
     }
 
     linkedInIcon() {
-        return this.getFooter().find('svg title').contains('LinkedIn').parents('a')
+        return this.getFooter().find('svg[aria-describedby="linkedin"]').contains('LinkedIn').parents('a')
     }
 
     xIcon() {
-        return this.getFooter().find('svg title').contains('Twitter').parents('a')
+        return this.getFooter().find('svg[aria-describedby="twitter"]').contains('Twitter').parents('a')
     }
 
     facebookIcon() {
-        return this.getFooter().find('svg title').contains('Facebook').parents('a')
+        return this.getFooter().find('svg[aria-describedby="facebook"]').contains('Facebook').parents('a')
     }
 
     // Actions

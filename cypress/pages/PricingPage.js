@@ -2,7 +2,7 @@ class PricingPage {
 
     // Locators
     pricingDescription() {
-        return cy.contains('Flexible, transparent pricing with discounts as you scale.')
+        return cy.get('section.section-pt-contrasting').find('p.typography-paragraph-lead')
     }
 
     // Actions

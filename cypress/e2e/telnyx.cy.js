@@ -33,7 +33,7 @@ describe("Desktop layout", () => {
         HomePage.getSignUpButton().should('be.visible')
         HomePage.clickSignUp()
         cy.url().should('include', '/sign-up')
-        SignUpPage.createAccountTitle().should('be.visible')
+        SignUpPage.createAccountTitle().should('be.visible').and('have.text', 'Create your account')
     });
 
     it("TC-005 Verify 'Log in' button is displayed and clickable", () => {
@@ -52,7 +52,7 @@ describe("Desktop layout", () => {
         HomePage.getViewAllPricingButton().should('be.visible')
         HomePage.clickViewAllPricing()
         cy.url().should('include', '/pricing')
-        PricingPage.pricingDescription().should('be.visible')
+        PricingPage.pricingDescription().should('be.visible').and('contain.text', 'Flexible, transparent pricing')
     });
 
     it("TC-007 Verify footer elements are displayed", () => {

@@ -2,7 +2,7 @@ class SignUpPage {
 
     // Locators
     createAccountTitle() {
-        return cy.contains('Create your account')
+        return cy.get('h1.base-heading')
     }
 
     // Actions
