@@ -134,7 +134,7 @@ The dashboard provides:
 
 ## CI/CD Pipeline
 
-GitHub Actions is configured to automatically run Cypress tests after push request event.
+GitHub Actions is configured to automatically run Cypress tests after push/pull request events.
 
 Pipeline flow:
 ```text

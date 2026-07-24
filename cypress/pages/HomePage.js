@@ -1,22 +1,5 @@
 class HomePage {
 
-    headerItems = [
-        'Products',
-        'Solutions',
-        'Pricing',
-        'Why Telnyx',
-        'Resources',
-        'Developers'
-    ]
-
-    footerItems = [
-        'Social',
-        'Company',
-        'Legal',
-        'Compare',
-        'Ask AI'
-    ]
-
     // Locators
     getCookieBannerCloseButton() {
         return cy.get('#onetrust-close-btn-container button')

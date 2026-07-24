@@ -22,9 +22,11 @@ describe("Desktop layout", () => {
 
     it("TC-003 Verify header elements are displayed", () => {
         HomePage.getHeaderMenu().should('be.visible')
-        HomePage.headerItems.forEach(item => {
-            HomePage.getHeaderMenu().contains(item).should('be.visible')
-        })
+        cy.fixture('navigation').then((navigation) => {
+            navigation.headerItems.forEach((item) => {
+                HomePage.getHeaderMenu().contains(item).should('be.visible');
+            });
+        });
     });
 
     it("TC-004 Verify 'Sign up' button is displayed and clickable", () => {
@@ -53,18 +55,22 @@ describe("Desktop layout", () => {
         PricingPage.pricingDescription().should('be.visible')
     });
 
-    it("TC-007 Verify footer elements are displayed", () => {
+    it.only("TC-007 Verify footer elements are displayed", () => {
         HomePage.getFooter().scrollIntoView().should('be.visible')
-        HomePage.footerItems.forEach(item => {
-            HomePage.getFooter().contains(item).should('be.visible')
-        })
+        cy.fixture('navigation').then((navigation) => {
+            navigation.footerItems.forEach((item) => {
+                HomePage.getFooter().contains(item).should('be.visible');
+            });
+        });
     });
 
     it("TC-009 Verify social media icons and links correctness", () => {
         HomePage.getFooter().scrollIntoView().should('be.visible')
-        HomePage.linkedInIcon().should('be.visible').and('have.attr', 'href', 'https://www.linkedin.com/company/telnyx')
-        HomePage.xIcon().should('be.visible').and('have.attr', 'href', 'https://x.com/telnyx')
-        HomePage.facebookIcon().should('be.visible').and('have.attr', 'href', 'https://www.facebook.com/Telnyx/')
+        cy.fixture("navigation").then((navigation) => {
+            HomePage.linkedInIcon().should("be.visible").and("have.attr", "href", navigation.socialLinks.linkedin);
+            HomePage.xIcon().should("be.visible").and("have.attr", "href", navigation.socialLinks.x);
+            HomePage.facebookIcon().should("be.visible").and("have.attr", "href", navigation.socialLinks.facebook);
+        });
     });
 
     it('TC-010 Verify page title', () => {

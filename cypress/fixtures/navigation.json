@@ -1,0 +1,22 @@
+{
+  "headerItems": [
+    "Products",
+    "Solutions",
+    "Pricing",
+    "Why Telnyx",
+    "Resources",
+    "Developers"
+  ],
+  "footerItems": [
+    "Social",
+    "Company",
+    "Legal",
+    "Compare",
+    "Ask AI"
+  ],
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/company/telnyx",
+    "facebook": "https://www.facebook.com/Telnyx/",
+    "x": "https://x.com/telnyx"
+  }
+}
