@@ -55,7 +55,7 @@ describe("Desktop layout", () => {
         PricingPage.pricingDescription().should('be.visible')
     });
 
-    it.only("TC-007 Verify footer elements are displayed", () => {
+    it("TC-007 Verify footer elements are displayed", () => {
         HomePage.getFooter().scrollIntoView().should('be.visible')
         cy.fixture('navigation').then((navigation) => {
             navigation.footerItems.forEach((item) => {

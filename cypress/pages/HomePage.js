@@ -42,15 +42,15 @@ class HomePage {
     }
 
     linkedInIcon() {
-        return this.getFooter().find('a[href="https://www.linkedin.com/company/telnyx"]')
+        return this.getFooter().find('svg title').contains('LinkedIn').parents('a')
     }
 
     xIcon() {
-        return this.getFooter().find('a[href="https://x.com/telnyx"]')
+        return this.getFooter().find('svg title').contains('Twitter').parents('a')
     }
 
     facebookIcon() {
-        return this.getFooter().find('a[href="https://www.facebook.com/Telnyx/"]')
+        return this.getFooter().find('svg title').contains('Facebook').parents('a')
     }
 
     // Actions
