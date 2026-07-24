@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "cypress": "^15.18.1"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:ci": "cypress run --browser chrome --record"
   }
 }
