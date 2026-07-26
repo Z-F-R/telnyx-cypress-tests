@@ -40,10 +40,16 @@ describe("Desktop layout", () => {
         HomePage.getLogInButton().should('be.visible')
         HomePage.clickLogIn()
         cy.url().should('include', 'portal.telnyx.com')
-        cy.origin('https://portal.telnyx.com', () => {
-            cy.get('[data-testid="login.signin.title"]')
-                .should('contain', 'Welcome Back')
-        })
+        cy.origin('https://portal.telnyx.com', {
+            args: {
+                selector: LoginPage.loginTitleSelector,
+                expectedText: 'Welcome Back'
+            }
+        },
+            ({ selector, expectedText }) => {
+                cy.get(selector).should('contain', expectedText)
+            }
+        )
     });
 
     it("TC-006 Verify Pricing page is opened", () => {
