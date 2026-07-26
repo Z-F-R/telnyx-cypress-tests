@@ -33,7 +33,7 @@ describe("Desktop layout", () => {
         HomePage.getSignUpButton().should('be.visible')
         HomePage.clickSignUp()
         cy.url().should('include', '/sign-up')
-        SignUpPage.createAccountTitle().should('be.visible').and('have.text', 'Create your account')
+        SignUpPage.getCreateAccountTitlereateAccountTitle().should('be.visible').and('have.text', 'Create your account')
     });
 
     it("TC-005 Verify 'Log in' button is displayed and clickable", () => {
@@ -52,7 +52,7 @@ describe("Desktop layout", () => {
         HomePage.getViewAllPricingButton().should('be.visible')
         HomePage.clickViewAllPricing()
         cy.url().should('include', '/pricing')
-        PricingPage.pricingDescription().should('be.visible').and('contain.text', 'Flexible, transparent pricing')
+        PricingPage.getPricingDescriptioningDescription().should('be.visible').and('contain.text', 'Flexible, transparent pricing')
     });
 
     it("TC-007 Verify footer elements are displayed", () => {
@@ -67,9 +67,9 @@ describe("Desktop layout", () => {
     it("TC-009 Verify social media icons and links correctness", () => {
         HomePage.getFooter().scrollIntoView().should('be.visible')
         cy.fixture("navigation").then((navigation) => {
-            HomePage.linkedInIcon().should("be.visible").and("have.attr", "href", navigation.socialLinks.linkedin);
-            HomePage.xIcon().should("be.visible").and("have.attr", "href", navigation.socialLinks.x);
-            HomePage.facebookIcon().should("be.visible").and("have.attr", "href", navigation.socialLinks.facebook);
+            HomePage.getLinkedInLink().should("be.visible").and("have.attr", "href", navigation.socialLinks.linkedin);
+            HomePage.getXLink().should("be.visible").and("have.attr", "href", navigation.socialLinks.x);
+            HomePage.getFacebookLink().should("be.visible").and("have.attr", "href", navigation.socialLinks.facebook);
         });
     });
 

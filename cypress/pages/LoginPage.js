@@ -1,7 +1,7 @@
 class LoginPage {
 
     // Locators
-    loginTitle() {
+    getLoginTitle() {
         return cy.get('[data-testid="login.signin.title"]')
     }
 

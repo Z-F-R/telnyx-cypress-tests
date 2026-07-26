@@ -1,7 +1,7 @@
 class PricingPage {
 
     // Locators
-    pricingDescription() {
+    getPricingDescription() {
         return cy.get('section.section-pt-contrasting').find('p.typography-paragraph-lead')
     }
 

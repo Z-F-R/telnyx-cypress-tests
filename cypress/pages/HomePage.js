@@ -41,15 +41,15 @@ class HomePage {
         return cy.get('#main-menu')
     }
 
-    linkedInIcon() {
+    getLinkedInLink() {
         return this.getFooter().find('svg[aria-describedby="linkedin"]').contains('LinkedIn').parents('a')
     }
 
-    xIcon() {
+    getXLink() {
         return this.getFooter().find('svg[aria-describedby="twitter"]').contains('Twitter').parents('a')
     }
 
-    facebookIcon() {
+    getFacebookLink() {
         return this.getFooter().find('svg[aria-describedby="facebook"]').contains('Facebook').parents('a')
     }
 

@@ -1,7 +1,7 @@
 class SignUpPage {
 
     // Locators
-    createAccountTitle() {
+    getCreateAccountTitle() {
         return cy.get('h1.base-heading')
     }
 
